@@ -3,30 +3,21 @@
 }
 
 body {
-  padding: 30px;
   font-family: "Helvetica";
   background: #cad1d6;
 }
 
-/* .tabs {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20px;
-} */
-
-/* Bookmark division */
 .bookmark-container {
+  margin-top: 50px;
+  margin-left: -40px;
   display: flex;
   flex-direction: column;
-  /* background-color: rgb(47, 48, 49); */
   align-content: space-between;
 }
 
 .bookmark-container > div {
-  /* background-color: #f1f1f1; */
   width: 500px;
   margin-left: 30px;
-  margin-top: 15px;
   margin-bottom: 15px;
   padding-left: 10px;
   /* text-align: center; */
@@ -36,7 +27,7 @@ body {
 .bookmark-div {
   height: 110px;
   border-radius: 25px;
-  border: 2px solid #4ec6de;
+  /* border: 2px solid #4ec6de; */
 }
 
 .bookmark-img {
@@ -66,7 +57,7 @@ body {
 
 .bookmark-similar {
   margin-top: -35px;
-  margin-left: 370px;
+  margin-left: 430px;
 }
 
 hr {
@@ -94,7 +85,7 @@ hr {
   justify-content: space-around;
   margin-top: 10px;
   border-radius: 25px;
-  border: 2px solid #4ec6de;
+  /* border: 2px solid #4ec6de; */
 }
 
 .keyword-data {
@@ -110,7 +101,7 @@ hr {
 
 .similar-website {
   border-radius: 25px;
-  border: 2px solid #4ec6de;
+  /* border: 2px solid #4ec6de; */
   margin-top: 30px;
   text-align: center;
 }
@@ -129,27 +120,6 @@ hr {
   margin-left: 68%;
   cursor: pointer;
 }
-/* .button {
-  margin-top: 10px;
-  margin-left: 2.5%;
-  background-color: white;
-  color: black;
-  border: 2px solid #4ec6de;
-  border-radius: 20px;
-  padding: 1px 3px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none !important;
-  box-shadow: none !important;
-} */
-
-/* .button:hover {
-  background-color: #4ec6de;
-  border: 2px solid white;
-} */
 
 .button_login {
   height: 10px;
@@ -169,6 +139,15 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
+.button_similar {
+  height: 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4ec6de;
+  color: black;
+  border-radius: 5px;
+}
+
 .username {
   margin-left: 60%;
   margin-top: -24px;
@@ -178,17 +157,14 @@ input[type="submit"] {
 .badge {
   margin-top: 10px;
   margin-right: 55px;
-  font-size: 18px;
 }
 .badge-link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
+  font-size: 20px;
 }
 
 .container {
-  margin-left: 20%;
-  margin-right: 15%;
-  margin-top: 2%;
   display: flex;
   justify-content: center;
 }
@@ -200,7 +176,9 @@ input[type="submit"] {
 
 .tabbed {
   width: 700px;
-  margin: 50px auto;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 15%;
 }
 
 .tabbed > input {
@@ -208,10 +186,11 @@ input[type="submit"] {
 }
 
 .tabbed > label {
+  margin-right: 10%;
   display: block;
   float: left;
   padding: 12px 20px;
-  margin-right: 5px;
+
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -227,10 +206,10 @@ input[type="submit"] {
 }
 
 .tabs > div {
-  width: 700px;
+  width: 1000px;
   position: absolute;
-  border: 2px solid #4ec6de;
-  padding: 10px 30px 40px;
+  /* border: 2px solid #4ec6de; */
+  padding: 10px 0px 0px;
   line-height: 1.4em;
   opacity: 0;
   transform: rotateX(-20deg);
@@ -241,7 +220,8 @@ input[type="submit"] {
 
 #tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
 #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
-#tab-nav-3:checked ~ .tabs > div:nth-of-type(3) {
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4) {
   transform: rotateX(0);
   opacity: 1;
   z-index: 1;
@@ -274,16 +254,12 @@ input[type="submit"] {
 
 .searchBox {
   position: absolute;
-  top: 0px;
-  left: 50%;
-  margin-top: 2.5%;
-  /* transform: translate(-50%, 50%); */
+  left: 10%;
+  top: 10px;
   background: #2f3640;
   height: 40px;
   border-radius: 40px;
   padding: 10px;
-  /* margin-bottom: 20%; */
-  /* margin-top: -7.5%; */
 }
 
 .searchBox > .searchInput {
@@ -332,3 +308,114 @@ input[type="submit"] {
     padding: 0 6px;
   }
 }
+
+.bookmarks_main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.similar_website {
+  margin-left: 7%;
+}
+
+.similar_typo {
+  text-align: center;
+  font-size: 26px;
+}
+
+#page-numbers {
+  margin-top: 20px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  /* margin-left: 30px; */
+}
+
+.li-page {
+  margin-right: 20px;
+  width: 20px;
+  text-align: center;
+  border: 10px;
+  border-radius: 20px solid black;
+  color: white;
+  background-color: #003333;
+  cursor: pointer;
+}
+
+.hashtag {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* margin-left: -150px; */
+  margin-top: center;
+}
+
+.insight_terminology_terms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.insight_terminology {
+  text-align: center;
+}
+
+/* API
+.api {
+  margin: 5px;
+}
+
+.api-method {
+  margin: 5px;
+  margin-left: 20px;
+  color: green;
+  line-height: 30px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.api-name {
+  margin: 5px;
+  color: black;
+  text-align: center;
+  margin-left: 50px;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 2px;
+  transition: 0.2s;
+}
+
+.main-route {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.api-route {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: -20px;
+}
+
+.api-object {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: -20px;
+}
+
+.api-response {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: -20px;
+}
+
+.api-response-textarea {
+  margin-left: 120px;
+}
+
+.api_method_name {
+  margin-top: 15px;
+  margin-bottom: -15px;
+} */

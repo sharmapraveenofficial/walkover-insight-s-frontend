@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 
@@ -10,13 +9,13 @@ export default class Header extends Component {
   render() {
     const { authenticated } = this.props;
     return (
-      <div class="container">
-        <span class="badge">
-          <Link class="badge-link" to="/">
-            Walkover
-          </Link>
+      <div className="container">
+        <span className="badge">
+          <a className="badge-link" href="/">
+            Walkover Insight's
+          </a>
         </span>
-        <div class="button">
+        <div className="button">
           {authenticated ? (
             <input
               type="submit"
