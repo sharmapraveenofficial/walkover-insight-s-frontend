@@ -24,7 +24,7 @@ export default class HomePage extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch("http://localhost:3000/login/success", {
+    fetch(`http://localhost:3000/login/success`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -54,7 +54,7 @@ export default class HomePage extends Component {
   }
 
   render() {
-    const { authenticated, user, data} = this.state;
+    const { authenticated, user, data } = this.state;
 
     return (
       <div>

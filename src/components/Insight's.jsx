@@ -176,19 +176,20 @@ export default function EnhancedTable() {
         <h1>Terminology we use... </h1>
         <div className="insight_terminology_terms">
           <p>
-            <b>Score:-</b> Score means average rank of the Industry
-            into the cluster's.
+            <b>Score:-</b> Score means average rank of the Industry into the
+            cluster's.
           </p>
           <p>
-            <b>Score Change:-</b> Score Change is the increament
-            or decrement from the previous scores.
+            <b>Score Change:-</b> Score Change is the increament or decrement
+            from the previous scores.
           </p>
           <p>
-            <b>Size:-</b> Size means count of website in that particular Industry into the cluster's.
+            <b>Size:-</b> Size means count of website in that particular
+            Industry into the cluster's.
           </p>
           <p>
-            <b>Size Change:-</b> Size Change is the size increament or
-            decrement from the previous Size.
+            <b>Size Change:-</b> Size Change is the size increament or decrement
+            from the previous Size.
           </p>
         </div>
       </div>

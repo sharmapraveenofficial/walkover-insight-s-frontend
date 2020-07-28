@@ -17,7 +17,7 @@ body {
 
 .bookmark-container > div {
   width: 500px;
-  margin-left: 30px;
+  margin-left: 40px;
   margin-bottom: 15px;
   padding-left: 10px;
   /* text-align: center; */
@@ -175,16 +175,20 @@ input[type="submit"] {
 }
 
 .tabbed {
-  width: 700px;
+  width: 1000px;
   margin-top: 20px;
   margin-right: auto;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .tabbed > input {
   display: none;
 }
 
+.bookmark_hashtag {
+  display: flex;
+  flex-direction: row;
+}
 .tabbed > label {
   margin-right: 10%;
   display: block;
@@ -195,7 +199,6 @@ input[type="submit"] {
   transition: background-color 0.3s;
 }
 
-.tabbed > label:hover,
 .tabbed > input:checked + label {
   background: #4ec6de;
 }
@@ -206,15 +209,15 @@ input[type="submit"] {
 }
 
 .tabs > div {
-  width: 1000px;
+  width: 1050px;
   position: absolute;
   /* border: 2px solid #4ec6de; */
   padding: 10px 0px 0px;
   line-height: 1.4em;
   opacity: 0;
-  transform: rotateX(-20deg);
-  transform-origin: top center;
-  transition: opacity 0.3s, transform 1s;
+  /* transform: rotateX(-20deg); */
+  /* transform-origin: top center; */
+  /* transition: opacity 0.3s, transform 1s; */
   z-index: 0;
 }
 
@@ -222,7 +225,7 @@ input[type="submit"] {
 #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
 #tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
 #tab-nav-4:checked ~ .tabs > div:nth-of-type(4) {
-  transform: rotateX(0);
+  /* transform: rotateX(0); */
   opacity: 1;
   z-index: 1;
 }
@@ -242,19 +245,19 @@ input[type="submit"] {
     padding: 0;
     opacity: 1;
     position: relative;
-    transform: none;
-    margin-bottom: 60px;
+    /* transform: none;*/
+    /* margin-bottom: 60px; */
   }
 
   .tabs > div h2 {
-    border-bottom: 2px solid #4ec6de;
+    /* border-bottom: 2px solid #4ec6de; */
     padding-bottom: 0.5em;
   }
 }
 
 .searchBox {
   position: absolute;
-  left: 10%;
+  left: 15%;
   top: 10px;
   background: #2f3640;
   height: 40px;
@@ -291,7 +294,7 @@ input[type="submit"] {
   border: none;
   background: none;
   outline: none;
-  float: left;
+  /* float: left; */
   padding: 0;
   color: white;
   font-size: 16px;
@@ -299,7 +302,7 @@ input[type="submit"] {
   line-height: 40px;
   width: 0px;
   margin-top: -10px;
-  margin-right: -7px;
+  margin-right: 7px;
 }
 
 @media screen and (max-width: 620px) {
@@ -315,7 +318,7 @@ input[type="submit"] {
 }
 
 .similar_website {
-  margin-left: 7%;
+  margin-left: 5%;
 }
 
 .similar_typo {
@@ -346,8 +349,8 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* margin-left: -150px; */
-  margin-top: center;
+  float: left;
+  margin-top: 20px;
 }
 
 .insight_terminology_terms {
@@ -359,63 +362,41 @@ input[type="submit"] {
   text-align: center;
 }
 
-/* API
-.api {
-  margin: 5px;
+.bookmark {
+  margin-left: -120px;
 }
 
-.api-method {
-  margin: 5px;
-  margin-left: 20px;
-  color: green;
-  line-height: 30px;
-  border-radius: 10px;
-  padding: 2px;
-}
-
-.api-name {
-  margin: 5px;
+.buttonTrue {
+  background-color: white;
   color: black;
+  height: 32px;
   text-align: center;
-  margin-left: 50px;
-  font-size: 16px;
-  line-height: 30px;
-  padding: 2px;
-  transition: 0.2s;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.main-route {
+.buttonFalse {
+  height: 32px;
   text-align: center;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  font-size: 16px;
+  text-decoration: none;
+  background-color: #4ec6de;
+  color: black;
+  border-radius: 5px;
 }
 
-.api-route {
-  font-size: 16px;
-  margin-top: 5px;
-  margin-left: 20px;
-  margin-bottom: -20px;
+.resetHashtag,
+.resetHashtag:hover {
+  text-decoration: none;
+  color: white;
 }
 
-.api-object {
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: -20px;
+.hashtag_clickable {
+  text-decoration: none;
+  color: black;
 }
 
-.api-response {
-  font-size: 16px;
-  margin-top: 5px;
-  margin-left: 20px;
-  margin-bottom: -20px;
+.hashtag_clickable:hover,
+.hashtag_clickable:focus {
+  color: blue;
+  text-decoration: none;
 }
-
-.api-response-textarea {
-  margin-left: 120px;
-}
-
-.api_method_name {
-  margin-top: 15px;
-  margin-bottom: -15px;
-} */

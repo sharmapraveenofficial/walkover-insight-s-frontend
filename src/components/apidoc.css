@@ -14,46 +14,21 @@ body {
   display: flex;
   position: relative;
 }
-.wrapper .sidebar {
-  width: 290px;
-  /* height: 100%; */
-  background: rgb(0, 0, 0);
-  padding: 30px 0px;
-  position: fixed;
-}
-.wrapper .sidebar h2 {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-.wrapper .sidebar ul li {
-  padding: 15px;
-  margin-top: 10px;
-}
-.wrapper .sidebar ul li a {
-  margin-top: 5px;
-  color: #bdb8d7;
-  display: block;
-}
-
-.wrapper .sidebar ul li:hover a {
-  color: #fff;
-}
 .wrapper .main_content {
   width: 100%;
-  margin-left: 285px;
+  /* margin-left: 285px; */
 }
 .wrapper .main_content .header {
-  padding: 18px;
+  /* padding: 18px; */
+  margin-top: 10px;
   background: #fff;
   color: #000000;
   font-size: 20px;
 }
 
 .wrapper .main_content .info {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #717171;
   line-height: 25px;
 }
@@ -61,7 +36,7 @@ body {
   margin-bottom: 20px;
 }
 .txt {
-  width: 85.5%;
+  width: 90%;
 }
 .jumbotron {
   padding: 2rem 1rem;
@@ -71,8 +46,8 @@ body {
 }
 .sampleresponse {
   background-color: white;
-  padding: 25px;
-  margin-top: -30px;
+  /* padding: 25px; */
+  margin-top: 20px;
 }
 .response {
   width: 100%;
