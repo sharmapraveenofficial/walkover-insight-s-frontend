@@ -8,8 +8,15 @@ export default class Main extends Component {
     const { user, data } = this.props;
 
     return (
+      <>
       <div>
-        <div className="username">Hello, {user.name}!</div>
+        {/* <div className="username">Hello, {user.name}!</div> */}
+        {/* <div>
+        <select className="username" onChange={this._handleLogoutClick}>
+            <option defaultValue> Hello, {user.name}!</option>
+            <option> Logout </option>
+        </select>
+        </div> */}
         <div>
           <div className="tabbed">
             <input type="radio" name="tabs" id="tab-nav-1" defaultChecked />
@@ -35,6 +42,12 @@ export default class Main extends Component {
           </div>
         </div>
       </div>
+      </>
     );
   }
+  _handleLogoutClick = () => {
+    // Logout using Twitter passport api
+    // Set authenticated state to false in the HomePage component
+    window.open(`http://localhost:3000/logout`, "_self");
+  };
 }

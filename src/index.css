@@ -119,6 +119,7 @@ hr {
   margin-top: 10px;
   margin-left: 68%;
   cursor: pointer;
+  padding: 5px 15px;
 }
 
 .button_login {
@@ -149,19 +150,28 @@ input[type="submit"] {
 }
 
 .username {
+  /* margin-top: 0rem; */
   margin-left: 60%;
-  margin-top: -24px;
+  margin-right: 30%;
+  /* margin-top: -10px; */
+  /* margin-top: 0px; */
+  /* margin-inline-start: 500px; */
   font-size: 18px;
+  padding: 5px;
+  position: relative;
+  display: inline;
 }
 
 .badge {
   margin-top: 10px;
   margin-right: 55px;
 }
+
 .badge-link {
   text-decoration: none !important;
   color: black;
   font-size: 20px;
+  position: absolute;
 }
 
 .container {
@@ -324,6 +334,7 @@ input[type="submit"] {
 .similar_typo {
   text-align: center;
   font-size: 26px;
+  margin-inline-start: 50px;
 }
 
 #page-numbers {
@@ -393,6 +404,7 @@ input[type="submit"] {
 .hashtag_clickable {
   text-decoration: none;
   color: black;
+  margin-left: 30px;
 }
 
 .hashtag_clickable:hover,
@@ -400,3 +412,79 @@ input[type="submit"] {
   color: blue;
   text-decoration: none;
 }
+
+
+#left {
+  margin-left: 200px;
+} 
+
+.nav {
+  font-size: 22px;
+}
+
+#badge {
+  margin-left: 170px;
+}
+ 
+#extension {
+  margin-right: 100px;
+}
+
+#dropdown {
+  margin-right: 70px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* left: inherit; */
+  z-index: 1000;
+  display: none;
+  /* float: left; */
+  float: none;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  /* text-align: left; */
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px)  {
+       
+  #badge {
+    margin-left: 20px;
+  }
+  
+  #extension {
+    margin-right: 10px;
+  }
+  
+  #dropdown {
+    margin-right: 7px;
+  }
+  .hashtag_clickable {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+  }
+  
+  .hashtag_clickable:hover,
+  .hashtag_clickable:focus {
+    color: blue;
+    text-decoration: none;
+  }
+
+  body {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+} 

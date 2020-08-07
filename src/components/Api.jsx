@@ -11,7 +11,7 @@ function APIDoc() {
             List of matching domain websites and there ranks
           </div>
           <div className="info">
-            Api Syntex ->
+            Api Syntex 
             <input
               className="txt"
               type="text"
@@ -56,6 +56,12 @@ function APIDoc() {
               `}
               disabled
             ></textarea>
+          </div><br />
+          <div>
+            Description
+            <div><br></br>
+              This API will fetch Similar Domain Websites and thier Ranks. It works with only GET method.
+            </div>
           </div>
         </div>
       </div>

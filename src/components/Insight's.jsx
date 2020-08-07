@@ -11,6 +11,8 @@ import TableRow from "@material-ui/core/TableRow";
 import TableSortLabel from "@material-ui/core/TableSortLabel";
 import Paper from "@material-ui/core/Paper";
 import { useEffect, useState } from "react";
+import {Modal, Button} from 'react-modal';
+import {OverlayTrigger, Tooltip} from 'react-modal';
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -51,7 +53,7 @@ const headCells = [
     disablePadding: false,
     label: "Name"
   },
-  { id: "keywords", numeric: false, disablePadding: false, label: "keywords" },
+  { id: "keywords", numeric: false, disablePadding: false, label: "keywords"},
   { id: "primary", numeric: true, disablePadding: false, label: "Score" },
   {
     id: "secondary",
@@ -68,13 +70,61 @@ const headCells = [
   }
 ];
 
+
 function EnhancedTableHead(props) {
   const { classes, order, orderBy, onRequestSort } = props;
   const createSortHandler = property => event => {
     onRequestSort(event, property);
   };
 
+  function Modals(){
+    const [scoreShow, setscoreShow] = useState(false);
+    const [scorechnageShow, setscorechangeShow] = useState(false);
+    const [sizeShow, setsizeShow] = useState(false);
+    const [sizechangeShow, setsizechangeShow] = useState(false);
+    const [Show, setShow] = useState(false);
+  
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
+    const rowEvents = {
+      onClick: (e, row) => {
+        console.log(row);
+        toggleTrueFalse();
+      },
+    };
+
+    const toggleTrueFalse = () => {
+      setShow(handleShow);
+    };
+
+    const ModalContent = () => {
+      return (
+        <>
+        <Modal
+        size="sm"
+        show={setscoreShow}
+        onHide={() => setscoreShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Set Score
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body> Score</Modal.Body>
+        <Modal.Footer> 
+          <Button onClick={handleClose}> Close</Button>
+        </Modal.Footer>
+      </Modal>
+      {setscoreShow ? <Modals /> : null}
+      </>
+      )
+    };
+  }
+
   return (
+    <>
     <TableHead>
       <TableRow>
         {headCells.map(headCell => (
@@ -83,6 +133,8 @@ function EnhancedTableHead(props) {
             align={!headCell.numeric ? "right" : "left"}
             padding={headCell.disablePadding ? "none" : "default"}
             sortDirection={orderBy === headCell.id ? order : false}
+    
+            // rowEvents={rowEvents}
           >
             <TableSortLabel
               active={orderBy === headCell.id}
@@ -100,6 +152,8 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+    
+    </>
   );
 }
 
@@ -172,27 +226,6 @@ export default function EnhancedTable() {
 
   return (
     <div className={classes.root}>
-      <div className="insight_terminology">
-        <h1>Terminology we use... </h1>
-        <div className="insight_terminology_terms">
-          <p>
-            <b>Score:-</b> Score means average rank of the Industry into the
-            cluster's.
-          </p>
-          <p>
-            <b>Score Change:-</b> Score Change is the increament or decrement
-            from the previous scores.
-          </p>
-          <p>
-            <b>Size:-</b> Size means count of website in that particular
-            Industry into the cluster's.
-          </p>
-          <p>
-            <b>Size Change:-</b> Size Change is the size increament or decrement
-            from the previous Size.
-          </p>
-        </div>
-      </div>
       <Paper className={classes.paper}>
         <TableContainer>
           <Table
@@ -243,3 +276,8 @@ export default function EnhancedTable() {
     </div>
   );
 }
+
+
+
+
+
